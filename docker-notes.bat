@@ -15,3 +15,9 @@ docker push myrepositoryname/imagename:0.1.0
 :: Pull
 :: To download a docker image from the registry to local
 docker pull myrepositoryname/imagename:0.1.0
+
+
+docker build -t greeterimage:0.1.0 .
+docker run --name greetercontainer greeterimage:0.1.0
+docker tag greeterimage:0.1.0 regulatedrot/greeterimage:0.1.0
+docker push regulatedrot/greeter:0.1.0
