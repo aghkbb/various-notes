@@ -10,3 +10,8 @@ create database db_tuan;
 create user 'springuser'@'%' identified by 'ThePassword';
 
 grant all on db_tuan.* to 'springuser'@'%';
+
+curl localhost:8080/meal/add -d food=curry -d location=jurong -d date=tomorrow
+curl localhost:8080/meal/add -d food=dimsum -d location=yuhua -d date=16011990
+
+curl localhost:8080/meal/all
