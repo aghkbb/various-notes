@@ -22,4 +22,8 @@ docker run --name greetercontainer greeterimage:0.1.0
 docker tag greeterimage:0.1.0 regulatedrot/greeterimage:0.1.0
 docker push regulatedrot/greeter:0.1.0
 
-docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql
+docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=password -d mysql
+
+docker network create tyf-network
+docker run --network tyf-network --name mysql-container -e MYSQL_ROOT_PASSWORD=password -d mysql
+docker run -it --network tyf-network --rm mysql mysql -hmysql-container -uroot -p
