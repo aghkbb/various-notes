@@ -21,3 +21,5 @@ docker build -t greeterimage:0.1.0 .
 docker run --name greetercontainer greeterimage:0.1.0
 docker tag greeterimage:0.1.0 regulatedrot/greeterimage:0.1.0
 docker push regulatedrot/greeter:0.1.0
+
+docker run -d --name mysql-container mysql -e MYSQL_ROOT_PASSWORD=password
