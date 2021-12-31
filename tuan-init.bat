@@ -23,3 +23,8 @@ spring.jpa.hibernate.ddl-auto=update
 
 ng new tuan-client
 ng generate component meal-list
+ng generate component meal-form
+mkdir model && cd model
+ng generate class meal
+mkdir service && cd service
+ng generate service meal
