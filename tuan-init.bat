@@ -15,3 +15,8 @@ curl localhost:8080/meal/add -d food=curry -d location=jurong -d date=tomorrow
 curl localhost:8080/meal/add -d food=dimsum -d location=yuhua -d date=16011990
 
 curl localhost:8080/meal/all
+
+::harden
+revoke all on db_example.* from 'springuser'@'%';
+grant select, insert, delete, update on db_tuan.* to 'springuser'@'%';
+spring.jpa.hibernate.ddl-auto=update
