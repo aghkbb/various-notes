@@ -20,3 +20,6 @@ curl localhost:8080/meal/all
 revoke all on db_example.* from 'springuser'@'%';
 grant select, insert, delete, update on db_tuan.* to 'springuser'@'%';
 spring.jpa.hibernate.ddl-auto=update
+
+ng new tuan-client
+ng generate component meal-list
